@@ -1,7 +1,7 @@
 import psycopg2
 
 ## Bu değeri localinde çalışırken kendi passwordün yap. Ama kodu pushlarken 'postgres' olarak bırak.
-password = '1907'
+password = 'postgres'
 
 
 def connect_db():
