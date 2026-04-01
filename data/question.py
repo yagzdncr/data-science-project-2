@@ -1,7 +1,7 @@
 import psycopg2
 
 ## Bu değeri localinde çalışırken kendi passwordün yap. Ama kodu pushlarken 'postgres' olarak bırak.
-password = 'postgres'
+password = '1907'
 
 
 def connect_db():
@@ -57,7 +57,8 @@ def question_4_query():
 def question_5_query():
     connection = connect_db()
     cursor = connection.cursor()
-    cursor.execute('SELECT * from students WHERE age BETWEEN 22 AND 24;')
+    cursor.execute('''SELECT * FROM students WHERE age BETWEEN 22 AND 24 ;
+''')
     data = cursor.fetchall()
     cursor.close()
     connection.close()
